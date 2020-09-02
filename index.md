@@ -2,6 +2,16 @@
 layout: default
 ---
 
+{% for post in site.posts %}
+
+{{ post.date | date:"%m/%d" }}
+{{ post.date | date:"%Y" }}
+{{ post.content | | split:'' | first }}
+{{ post.date | date_to_string }}
+{{ post.title }}
+{% endfor %}
+
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
@@ -118,12 +128,6 @@ end
 Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
 ```
 
-{% for post in site.posts %}
-
-{{ post.date | date:"%m/%d" }}
-{{ post.date | date:"%Y" }}
-{{ post.content | | split:'' | first }}
-{% endfor %}
 
 ```
 The final element.
