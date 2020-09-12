@@ -2,6 +2,9 @@
 layout: default
 ---
 
+[About me](./another-page.html)
+
+My blog posts
 {% for post in site.posts %}
 
 {{ post.date | date:"%m/%d" }}
@@ -11,5 +14,5 @@ layout: default
 {{ post.title }}
 {% endfor %}
 
-[Link to another page](./another-page.html).
+
 
