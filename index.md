@@ -2,17 +2,14 @@
 layout: default
 ---
 
-[About me](./another-page.html)
+[About me](./about)
 
-My blog posts
-{% for post in site.posts %}
-
-{{ post.date | date:"%m/%d" }}
-{{ post.date | date:"%Y" }}
-{{ post.content | | split:'' | first }}
-{{ post.date | date_to_string }}
-{{ post.title }}
-{% endfor %}
+<h1>Latest Posts</h1>
+<p>
+  {% for post in site.posts %}
+    <h2><a href="{{ post.url }}">{{ post.date}}: {{ post.title}}</a></h2>
+  {% endfor %}
+</p>
 
 
 
