@@ -4,9 +4,6 @@ layout: default
 
 ## About Me
 
-
-<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="de_DE" data-type="horizontal" data-theme="light" data-vanity="daniel-lombardo-17806463"><a class="LI-simple-link" href='https://de.linkedin.com/in/daniel-lombardo-17806463?trk=profile-badge'>Daniel Lombardo</a></div>
-<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="de_DE" data-type="vertical" data-theme="light" data-vanity="daniel-lombardo-17806463"><a class="LI-simple-link" href='https://de.linkedin.com/in/daniel-lombardo-17806463?trk=profile-badge'>Daniel Lombardo</a></div>
+{% include badge.html %}
 
 [back](./)

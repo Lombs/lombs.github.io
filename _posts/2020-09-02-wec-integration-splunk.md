@@ -4,6 +4,7 @@ author: Lombs
 title: Splunkin' Windows Event Collection
 date: 2020-09-02
 tags: splunk
+date_readable: 2020-09-02
 ---
 
 # Goal
