@@ -10,11 +10,11 @@ date_readable: 2020-09-02
 # Goal
  
 We want to achieve the followings extractions / configs for all WinEventLogs coming from the WEC:
-- Store/Remember the WEC host name in a field called host_uf (at index-time)
+- Store/Remember the WEC host name in a field called host_wec (at index-time)
 - Replace host field with value from field ComputerName / Computer (at index-time)
 - Store/Remember the original channel name in a field called original_channel (at index-time)
 - Make it work for sourcetype WinEventLog as well as XmlWinEventLog
-- Extract a new field called bcd_domain from host field by cutting of the trailing domain name (at search-time)
+- Extract a new field called ad_domain from host field by cutting of the trailing domain name (at search-time)
 - Get this additional extractions only for Events from WEC and cause interference with WinEventLogs coming in directly from UFs
  
 # Universal Forwarder Configuration (WEC)
@@ -36,8 +36,7 @@ evt_resolve_ad_obj = 0
 evt_sid_cache_exp = 300
 evt_sid_cache_exp_neg = 300
 evt_sid_cache_max_entries = 4000
-host = CA-APL3001
-index = sec_ad_bcd
+index = domain_controllers
 interval = 60
 renderXml = 1
 sourcetype = XmlWinEventLog:ForwardedEvents
@@ -55,8 +54,7 @@ evt_resolve_ad_obj = 0
 evt_sid_cache_exp = 300
 evt_sid_cache_exp_neg = 300
 evt_sid_cache_max_entries = 4000
-host = CA-APL3001
-index = sec_ad_bcd
+index = domain_controllers
 interval = 60
 renderXml = 1
 sourcetype = XmlWinEventLog:ForwardedEvents
@@ -74,8 +72,7 @@ evt_resolve_ad_obj = 0
 evt_sid_cache_exp = 300
 evt_sid_cache_exp_neg = 300
 evt_sid_cache_max_entries = 4000
-host = CA-APL3001
-index = sec_ad_bcd
+index = domain_controllers
 interval = 60
 renderXml = 0
 sourcetype = WinEventLog:ForwardedEvents

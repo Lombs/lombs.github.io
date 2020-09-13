@@ -21,8 +21,5 @@ layout: default
   <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
 </ul>
 {% endif %}
-<p class="view"><a href="{{ site.baseurl }}{% link index.md %}">Home</a></p>
-<p class="view"><a href="{{ site.baseurl }}{% link sample.md %}">About SIEMphonies</a></p>
-<p class="view"><a href="{{ site.baseurl }}{% link about.md %}">About Me</a></p>
 
 [back](./)
