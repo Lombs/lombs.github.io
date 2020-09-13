@@ -1,9 +1,6 @@
 ---
 layout: default
 ---
-
-[About me](./about)
-
 <h1>Latest Posts</h1>
 <p>
   {% for post in site.posts %}
