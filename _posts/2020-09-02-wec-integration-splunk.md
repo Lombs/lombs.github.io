@@ -260,3 +260,5 @@ index=_internal host=WEC-host group=per_sourcetype_thruput | stats count by seri
 - https://community.splunk.com/t5/Getting-Data-In/Windows-Event-Forwarding-custom-channels-renaming-sources-adding/m-p/516977#M87495
 - https://wiki.splunk.com/Community:HowIndexingWorks
 - https://docs.splunk.com/Documentation/Splunk/8.0.5/Indexer/Indextimeversussearchtime
+
+[back](./)
