@@ -220,18 +220,17 @@ Which sourcetypes are leaving the UF on the WEC?
 index=_internal host=WEC-host group=per_sourcetype_thruput | stats count by series
 ```
 
-# Lessons Learned / ToDo's
+# Lessons Learned
 - SEDCMD runs at index-time (https://docs.splunk.com/Documentation/Splunk/8.0.5/Data/Anonymizedata)
 - Be aware of execution order of TRANSFORMS-* attributes of stanzas in props.conf
 - Using a WEC is not Splunk Best Practice
 - Splunk will indeed not process props again after changing the sourcetype (https://community.splunk.com/t5/Getting-Data-In/What-are-the-precedence-of-stanza-and-option-in-props-conf/td-p/303042)
-- ad_domain can be turned into a indexed extraction, then it can also be used within tstats commands etc.
 		
 # Sources
 
-- https://community.splunk.com/t5/All-Apps-and-Add-ons/WinEventLog-ForwardedEvents-override/td-p/129032#answer-330822
-- https://community.splunk.com/t5/Getting-Data-In/Windows-Event-Forwarding-custom-channels-renaming-sources-adding/m-p/516977#M87495
-- https://wiki.splunk.com/Community:HowIndexingWorks
-- https://docs.splunk.com/Documentation/Splunk/8.0.5/Indexer/Indextimeversussearchtime
+- [Splunk Community - 1](https://community.splunk.com/t5/All-Apps-and-Add-ons/WinEventLog-ForwardedEvents-override/td-p/129032#answer-330822)
+- [Splunk Community - 2](https://community.splunk.com/t5/Getting-Data-In/Windows-Event-Forwarding-custom-channels-renaming-sources-adding/m-p/516977#M87495)
+- [Splunk Wiki](https://wiki.splunk.com/Community:HowIndexingWorks)
+- [Splunk Docs](https://docs.splunk.com/Documentation/Splunk/8.0.5/Indexer/Indextimeversussearchtime)
 
 [back](./)

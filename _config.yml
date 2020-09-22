@@ -4,3 +4,4 @@ logo: /assets/img/logo_own.png
 description: Stories of a SIEM engineer
 show_downloads: false
 theme: jekyll-theme-minimal
+baseurl: /
