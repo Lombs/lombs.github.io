@@ -83,12 +83,11 @@ TRANSFORMS-change_xml_host_for_windows_wef = WinEventRememberHost, WinEventXmlHo
 ############################################################################
 ## Custom Event Cleanup (Trimming and Storing Channel Names)
 ############################################################################
-[source::WinEventLog:*]
-SEDCMD-trim_event-text = s/This event is generated[\S\s\r\n]+$/<Trimmed>/g
 
-# These stanzas apply on sources AND sourcetypes. Copied from Windows TA
+# These stanzas apply sourcetypes and the syntax allows wildcards. Copied from Windows TA
 [(?::){0}WinEventLog:*]
 TRANSFORMS-1-SaveOrigChannel = WinEventSetOrigChannelName
+SEDCMD-trim_event-text = s/This event is generated[\S\s\r\n]+$/<Trimmed>/g
 
 [(?::){0}XmlWinEventLog:*]
 TRANSFORMS-1-XmlSaveOrigChannel = WinEventSetOrigChannelName
@@ -228,9 +227,10 @@ index=_internal host=WEC-host group=per_sourcetype_thruput | stats count by seri
 		
 # Sources
 
-- [Splunk Community - 1](https://community.splunk.com/t5/All-Apps-and-Add-ons/WinEventLog-ForwardedEvents-override/td-p/129032#answer-330822)
-- [Splunk Community - 2](https://community.splunk.com/t5/Getting-Data-In/Windows-Event-Forwarding-custom-channels-renaming-sources-adding/m-p/516977#M87495)
-- [Splunk Wiki](https://wiki.splunk.com/Community:HowIndexingWorks)
-- [Splunk Docs](https://docs.splunk.com/Documentation/Splunk/8.0.5/Indexer/Indextimeversussearchtime)
+- [Splunk Community - 1](https://community.splunk.com/t5/All-Apps-and-Add-ons/WinEventLog-ForwardedEvents-override/td-p/129032#answer-330822){:target="_blank"}
+- [Splunk Community - 2](https://community.splunk.com/t5/Getting-Data-In/Windows-Event-Forwarding-custom-channels-renaming-sources-adding/m-p/516977#M87495){:target="_blank"}
+- [Splunk Wiki](https://wiki.splunk.com/Community:HowIndexingWorks){:target="_blank"}
+- [Splunk Docs](https://docs.splunk.com/Documentation/Splunk/8.0.5/Indexer/Indextimeversussearchtime){:target="_blank"}
+- [What the WEF](https://www.splunk.com/en_us/blog/security/what-the-wef-choosing-windows-event-forwarding-or-splunk-universal-forwarder.html){:target="_blank"}
 
 [back](./)
