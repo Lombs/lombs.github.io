@@ -20,20 +20,18 @@
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
- <p>{{ site.description | default: site.github.project_tagline }}</p> 
+<!--
+        <p>{{ site.description | default: site.github.project_tagline }}</p> 
         <p class="view"><a href="{{ site.baseurl }}{% link index.md %}">Home</a></p>
         <p class="view"><a href="{{ site.baseurl }}{% link about.md %}">About SIEMplexity</a></p>
         <p class="view"><a href="{{ site.baseurl }}{% link about_me.md %}">About Me</a></p>
         <p class="view"><a href="{{ site.baseurl }}{% link usefull_links.md %}">Usefull Links</a></p>
-
+-->
         <div class="icon-container">
-          <div class="icon icon-fill"><i class="fa fa-home"></i></div>
-          <div class="icon icon-fill"><i>s</i></div>
-          <div class="icon icon-fill"><i class="fa fa-home">ssss</i></div>
-          <div class="icon icon-enter"><i class="fa fa-user"></i></div>
-          <div class="icon icon-expand"> <i class="fa fa-bars"></i></div>
-          <div class="icon icon-collapse"><i class="fa fa-sign-in"></i></div>
-          <div class="icon icon-rotate"><i class="fa fa-phone"></i></div>
+          <a href="{{ site.baseurl }}{% link index.md %}"><div class="icon icon-fill"><i>Blog</i></div></a>
+          <a href="{{ site.baseurl }}{% link about.md %}"><div class="icon icon-fill"><i>About</i></div></a>
+          <a href="{{ site.baseurl }}{% link about_me.md %}"><div class="icon icon-fill"><i>Me</i></div></a>
+          <a href="{{ site.baseurl }}{% link usefull_links.md %}"><div class="icon icon-fill"><i>Links</i></div></a>
         </div>
         </header>
       <section>
