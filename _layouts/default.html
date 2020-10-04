@@ -20,14 +20,24 @@
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+ <p>{{ site.description | default: site.github.project_tagline }}</p> 
         <p class="view"><a href="{{ site.baseurl }}{% link index.md %}">Home</a></p>
         <p class="view"><a href="{{ site.baseurl }}{% link about.md %}">About SIEMplexity</a></p>
         <p class="view"><a href="{{ site.baseurl }}{% link about_me.md %}">About Me</a></p>
         <p class="view"><a href="{{ site.baseurl }}{% link usefull_links.md %}">Usefull Links</a></p>
-      </header>
-      <section>
 
+        <div class="icon-container">
+          <div class="icon icon-fill"><i class="fa fa-home"></i></div>
+          <div class="icon icon-fill"><i>s</i></div>
+          <div class="icon icon-fill"><i class="fa fa-home">ssss</i></div>
+          <div class="icon icon-enter"><i class="fa fa-user"></i></div>
+          <div class="icon icon-expand"> <i class="fa fa-bars"></i></div>
+          <div class="icon icon-collapse"><i class="fa fa-sign-in"></i></div>
+          <div class="icon icon-rotate"><i class="fa fa-phone"></i></div>
+        </div>
+        </header>
+      <section>
+      
       {{ content }}
 
       </section>
@@ -39,15 +49,5 @@
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    {% if site.google_analytics %}
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{ site.google_analytics }}', 'auto');
-      ga('send', 'pageview');
-    </script>
-    {% endif %}
   </body>
 </html>

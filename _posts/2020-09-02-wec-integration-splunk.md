@@ -233,4 +233,5 @@ index=_internal host=WEC-host group=per_sourcetype_thruput | stats count by seri
 - [Splunk Docs](https://docs.splunk.com/Documentation/Splunk/8.0.5/Indexer/Indextimeversussearchtime){:target="_blank"}
 - [What the WEF](https://www.splunk.com/en_us/blog/security/what-the-wef-choosing-windows-event-forwarding-or-splunk-universal-forwarder.html){:target="_blank"}
 
-[back](./)
+[back](./){: .btn .btn-outline--primary .btn--small}
+[large](#){: .btn .btn-outline--primary .btn--large}
