@@ -1,5 +1,6 @@
 @import "fonts";
 @import "rouge-github";
+@import "custom";
 
 body {
   background-color: #fff;
@@ -269,91 +270,4 @@ footer {
     font-size:12pt;
     color:#444;
   }
-}
-
-$icon-size    : 70px;
-$border-radius: 0.5;//15% = 0.15, 50% = 0.50 etc.
-
-//  Colors
-$green        : #16A085;
-$red          : #C82647;
-$green-l      : #8CC63F;
-$orange       : #EB9532;
-$purple       : #7E3661;
-$black        : #000000;
-$blue         : #044794;
-$white        : #FFFFFF;
-
-.container{
-  display: table;
-  height: 95vh;
-  width: 90%;
-  padding-bottom: 5vh;
-  margin: auto auto;
-  @media (max-width: 900px){
-  }
-  z-index: -1;
-}
-
-.content{
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.icon-container{
-  position: relative;
-  margin-top: 50px;
-  width:860px;
-  height: 80px;
-  display: block;
-}
-
-.icon{
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  width: $icon-size;
-  height: $icon-size;
-  margin-left: $icon-size/10;
-  margin-right: $icon-size/10;
-  border-radius: $icon-size*$border-radius;
-  overflow: hidden;
-  text-align: center;
-  &::before, &::after{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      transition: all 0.25s ease;
-      border-radius: $icon-size*$border-radius;
-  }
-  i{
-      position: relative;
-      color: $black;
-      font-size: $icon-size/2;
-      margin-top: $icon-size/4;
-      transition: all 0.25s ease;
-  }
-}
-
-.icon-fill{
-  &::before{
-      transition-duration: 0.5s;
-      box-shadow: inset 0 0 0  $icon-size $black;
-  }
-  &:hover::before{
-      box-shadow: inset 0 0 0 $icon-size $blue;
-  }
-  i{
-    top: 25%;
-    position: relative;
-    color: $white;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: all 0.25s ease;
-    text-align: center;
-}
 }

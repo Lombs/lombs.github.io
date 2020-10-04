@@ -18,15 +18,8 @@
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         <h2>the Blog</h2>
         {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
+          <img src="{{site.logo | relative_url}}" alt="Logo" style="max-width:90%"/>
         {% endif %}
-<!--
-        <p>{{ site.description | default: site.github.project_tagline }}</p> 
-        <p class="view"><a href="{{ site.baseurl }}{% link index.md %}">Home</a></p>
-        <p class="view"><a href="{{ site.baseurl }}{% link about.md %}">About SIEMplexity</a></p>
-        <p class="view"><a href="{{ site.baseurl }}{% link about_me.md %}">About Me</a></p>
-        <p class="view"><a href="{{ site.baseurl }}{% link usefull_links.md %}">Usefull Links</a></p>
--->
         <div class="icon-container">
           <a href="{{ site.baseurl }}{% link index.md %}"><div class="icon icon-fill"><i>Blog</i></div></a>
           <a href="{{ site.baseurl }}{% link usefull_links.md %}"><div class="icon icon-fill"><i>Links</i></div></a>

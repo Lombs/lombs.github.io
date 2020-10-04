@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## About Me
+# About Me
 
 <dl>
 <dt>Name</dt>
