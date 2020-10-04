@@ -301,9 +301,11 @@ $white        : #FFFFFF;
 }
 
 .icon-container{
+  position: relative;
   margin-top: 50px;
-  width: 100%;
+  width:860px;
   height: 80px;
+  display: block;
 }
 
 .icon{
